@@ -1,0 +1,23 @@
+{
+  "name": "Bloxified",
+  "version": "2.0.1",
+  "description": "bloxified desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . --trace warnings",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=icons/favicon.png.ico --prune=true --out=mac",
+    "build": "electron-packager . Bloxified --overwrite --asar=false --platform=win32 --arch=ia32 --icon=icons/favicon.png.ico --prune=true --out=windows --version-string.CompanyName=Bloxified --version-string.FileDescription=CE --version-string.ProductName=\"Bloxified\" && electron-packager . Bloxified --overwrite --asar=true --platform=linux --arch=x64 --icon=icons/favicon.png.ico --prune=true --out=linux",
+    "installer": "node ./build.js"
+  },
+  "author": "Bloxified",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^13.1.7",
+    "electron-packager": "^15.3.0",
+    "eslint": "^7.32.0"
+  },
+  "dependencies": {
+    "electron-logger": "^0.0.3",
+    "update-electron-app": "^2.0.1"
+  }
+}

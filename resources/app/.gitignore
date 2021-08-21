@@ -1,0 +1,7 @@
+node_modules/
+release-builds/Bloxified-win32-ia32/Bloxified.exe
+.eslintrc.js
+linux/
+mac/
+windows/
+installer/
